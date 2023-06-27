@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bedrock MC - Addons para Minecraft Bedrock</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Estilos del encabezado */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    /* Estilos del pie de página */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Estilos del contenido principal */
+    main {
+      padding: 20px;
+    }
+
+    /* Estilos para enlaces */
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Bedrock MC - Addons para Minecraft Bedrock</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>¡Bienvenido a Bedrock MC!</h2>
+      <p>Explora nuestra colección de addons para Minecraft Bedrock y mejora tu experiencia de juego.</p>
+
+      <h3>Últimos addons agregados:</h3>
+      <ul>
+        <li><a href="#">Addon 1</a></li>
+        <li><a href="#">Addon 2</a></li>
+        <li><a href="#">Addon 3</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Bedrock MC. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bedrock MC - Addons para Minecraft Bedrock</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Estilos del encabezado */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    /* Estilos del pie de página */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Estilos del contenido principal */
+    main {
+      padding: 20px;
+    }
+
+    /* Estilos para enlaces */
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Bedrock MC - Addons para Minecraft Bedrock</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>¡Bienvenido a Bedrock MC!</h2>
+      <p>Explora nuestra colección de addons para Minecraft Bedrock y mejora tu experiencia de juego.</p>
+
+      <h3>Últimos addons agregados:</h3>
+      <ul>
+        <li><a href="#">Addon 1</a></li>
+        <li><a href="#">Addon 2</a></li>
+        <li><a href="#">Addon 3</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Bedrock MC. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
