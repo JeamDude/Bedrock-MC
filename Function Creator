@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de funciones de Minecraft Bedrock</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .card-panel {
+      background-color: #212121;
+    }
+
+    .input-field input[type="text"],
+    .input-field input[type="password"],
+    .input-field input[type="email"],
+    .input-field textarea {
+      color: #ffffff;
+    }
+
+    .input-field input[type="text"]:focus,
+    .input-field input[type="password"]:focus,
+    .input-field input[type="email"]:focus,
+    .input-field textarea:focus {
+      border-bottom: 1px solid #ffffff;
+      box-shadow: 0 1px 0 0 #ffffff;
+    }
+
+    .btn {
+      background-color: #1976d2;
+    }
+
+    .btn:hover {
+      background-color: #1565c0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h3>Generador de funciones de Minecraft Bedrock</h3>
+    <div class="card-panel">
+      <div class="input-field">
+        <input id="commandInput" type="text">
+        <label for="commandInput">Ingresa los comandos separados por punto y coma (;)</label>
+      </div>
+      <button class="btn waves-effect waves-light" onclick="generateFunction()">Generar función</button>
+      <a id="downloadLink" class="btn waves-effect waves-light disabled" download>Descargar función</a>
+    </div>
+  </div>
+
+  <script>
+    function generateFunction() {
+      var commands = document.getElementById('commandInput').value;
+      var commandsArray = commands.split(';');
+      var functionContent = '';
+
+      for (var i = 0; i < commandsArray.length; i++) {
+        functionContent += commandsArray[i].trim() + '\n';
+      }
+
+      var file = new Blob([functionContent], { type: 'text/plain' });
+      var downloadLink = document.getElementById('downloadLink');
+      downloadLink.href = URL.createObjectURL(file);
+      downloadLink.classList.remove('disabled');
+    }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
