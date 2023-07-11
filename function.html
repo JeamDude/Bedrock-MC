@@ -45,6 +45,10 @@
     .btn:hover {
       background-color: #1565c0;
     }
+
+    #fileNameModal {
+      max-width: 400px;
+    }
   </style>
 </head>
 
@@ -53,16 +57,34 @@
     <h3>Generador de funciones de Minecraft Bedrock</h3>
     <div class="card-panel">
       <div class="input-field">
-        <input id="commandInput" type="text">
+        <textarea id="commandInput" class="materialize-textarea"></textarea>
         <label for="commandInput">Ingresa los comandos separados por punto y coma (;)</label>
       </div>
-      <button class="btn waves-effect waves-light" onclick="generateFunction()">Generar función</button>
-      <a id="downloadLink" class="btn waves-effect waves-light disabled" download>Descargar función</a>
+      <button class="btn waves-effect waves-light" onclick="openFileNameModal()">Descargar función</button>
+    </div>
+  </div>
+
+  <!-- Modal para el nombre del archivo -->
+  <div id="fileNameModal" class="modal">
+    <div class="modal-content">
+      <h4>Guardar función</h4>
+      <div class="input-field">
+        <input id="fileNameInput" type="text" value="function" maxlength="50">
+        <label for="fileNameInput">Nombre de archivo (sin extensión)</label>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="btn waves-effect waves-light" onclick="downloadFunction()">Descargar</a>
     </div>
   </div>
 
   <script>
-    function generateFunction() {
+    function openFileNameModal() {
+      var modalInstance = M.Modal.init(document.getElementById('fileNameModal'));
+      modalInstance.open();
+    }
+
+    function downloadFunction() {
       var commands = document.getElementById('commandInput').value;
       var commandsArray = commands.split(';');
       var functionContent = '';
@@ -71,11 +93,26 @@
         functionContent += commandsArray[i].trim() + '\n';
       }
 
+      var fileName = document.getElementById('fileNameInput').value;
+      fileName = fileName.replace(/\.[^/.]+$/, "") + '.mcfunction';
+
       var file = new Blob([functionContent], { type: 'text/plain' });
-      var downloadLink = document.getElementById('downloadLink');
+      var downloadLink = document.createElement('a');
       downloadLink.href = URL.createObjectURL(file);
-      downloadLink.classList.remove('disabled');
+      downloadLink.download = fileName;
+      downloadLink.style.display = 'none';
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+
+      var modalInstance = M.Modal.getInstance(document.getElementById('fileNameModal'));
+      modalInstance.close();
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var textAreas = document.querySelectorAll('textarea');
+      M.textareaAutoResize(textAreas);
+    });
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
